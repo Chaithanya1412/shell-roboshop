@@ -42,7 +42,7 @@ VALIDATE $? "Creating system user"
 
 mkdir /app 
 VALIDATE $? "Creating App Directory"
-curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue-v3.zip
+curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue-v3.zip &>>$LOG_FILE
 VALIDATE $? "Downloading catalogue application"
 cd /app
 VALIDATE $? "Changing to app directory"
